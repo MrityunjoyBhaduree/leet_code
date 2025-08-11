@@ -20,10 +20,26 @@ Follow up: Could you do it without any loop/recursion in O(1) runtime?
 """
 
 
+# class Solution:
+#   def addDigits(self, num: int) -> int:
+#     while num > 9:
+#       num = sum(map(int, str(num)))
+#     return num
+#
+#   def process_number(self, num):
+#     if num <= 9:
+#       return num
+#     else:
+#       return self.addDigits(num)
+
 class Solution:
   def addDigits(self, num: int) -> int:
     while num > 9:
-      num = sum(map(int, str(num)))
+      num_str = str(num)
+      total = 0
+      for digit in num_str:
+        total += int(digit)
+      num = total
     return num
 
   def process_number(self, num):
