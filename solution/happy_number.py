@@ -64,3 +64,9 @@ class Solution:
 
     seen.append(res)
     return self.isHappy(res, seen)
+
+
+num = 1248
+a = num % 2
+print(a)
+
