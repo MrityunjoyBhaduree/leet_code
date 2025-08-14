@@ -51,7 +51,7 @@ class Solution:
     count = 0
     while n != 0:
       binary = n % 2
-      n = int(n / 2)
+      n = n // 2
       number.append(binary)
 
     for i in range(len(number)):
